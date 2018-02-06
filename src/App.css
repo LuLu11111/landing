@@ -1,0 +1,221 @@
+.App {
+  text-align: center;
+    
+}
+body {
+    background-image: url(1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.logo{
+    position: absolute;
+    top:3%;
+    left: 3%;
+  height: 30px;
+}
+.App-logo {
+ position: absolute;
+    top:25%;
+    left: 38%;
+  height: 300px;
+}
+.chatd{
+    margin-right: 3%;
+    width: 35%;
+    height: 20%;
+    
+    text-align: center;
+    clear: both;
+    color: aliceblue;
+    float: right;
+    background-color:brown;
+    border-radius: 15px;
+    margin-top: 15px;
+    
+}
+.chat{
+    
+     background-color: #f8f8f8;
+
+    position:absolute;
+    height: 50%;
+    width:90%;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto; 
+     -moz-border-radius: 1%;
+	-webkit-border-radius: 1%;
+	border-radius: 1%;
+    
+    
+}
+#topbar{
+    top:0;
+    position: absolute;
+    height:10%;
+    width:100%;
+    text-align: center;
+    color: aliceblue;
+    font-size: 16px;
+    background-color: brown;
+}
+
+.inptinfo{
+    position: relative;
+   bottom:0%;
+    width: 100%;
+    height: 10%;
+    
+    
+}
+.inp1{
+    position: absolute;
+    width: 80%;
+    height: 130%;
+    right: 0%;
+    top:10%;
+}
+.sentence{
+     position:relative;
+    width:65%;
+    height:80%;
+    text-align: center;
+    margin: 0;
+    float:right;
+    overflow: scroll;
+}
+
+.but1{
+    position: absolute;
+    top:77%;
+    left: 44%;
+    color:white;
+    background-color:brown;
+    border: 2px solid brown;
+    width:15%;
+    height: 7%;
+}
+
+
+#chatDisplay{
+    width:100%;
+    background-color: white;
+    float: right;
+    height: 60%;
+    overflow: scroll;
+    
+    
+    
+}
+#allUsers{
+    position: relative;
+    margin-left:10px;
+    width:20%;
+    background-color: white;
+    height:88%;
+    text-align: center;
+    margin: 0;
+    margin-top: -35px;
+    border-right-color: 2px solid brown;
+   
+    
+}
+
+.input2{
+    position: relative;
+    bottom:20%;
+    padding:10px;
+    border-color: white;
+    width:90%;
+    left: 0%;
+
+
+}
+.btn2{
+    height: 33px;
+    position:relative;
+    background-color: brown;
+    bottom:20%;
+    padding:3px;
+    border-color: brown;
+    font-size: 1em;
+    color: white;
+}
+
+.input1{
+    padding:2%;
+    border-color: white;
+    width:40%; 
+    position: relative;
+    top:20%;
+
+}
+.send{
+    height: 50px;
+    position:absolute;
+    background-color: brown;
+    padding:6px;
+    border-color: brown;
+    font-size: 1em;
+    color: white;
+     position: relative;
+    top:20%;
+}
+ul{
+    position: absolute;
+    top:15px;
+    width: 100%;
+    
+}
+li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 10%;
+    float: right;
+    color: black;
+    font-family: sans-serif;
+    font-size: 14px;
+   
+    
+}
+
+.App-header {
+  background-color:darkgray;
+  opacity: 0.2;
+  height: 30px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  
+    position: absolute;
+    top:142%;
+    left: 12%;
+    width: 30%;
+    font-size: 14px;
+     text-align: center;
+    font-family: sans-serif;
+    float: left;
+ 
+        
+}
+.App-intro2{
+    position: absolute;
+    top:142%;
+    right: 12%;
+    width: 30%;
+    font-size: 14px;
+  text-align: center;
+    font-family: sans-serif;
+    float: right;
+    
+}
+
+
