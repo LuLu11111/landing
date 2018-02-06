@@ -34,7 +34,7 @@ class Chat extends Component {
             mode:1
         })
         
-        this.socket = mySocket("http://localhost:10001");
+        this.socket = mySocket("https://reallysocket.herokuapp.com/");
         this.socket.emit("username", this.state.username);
         this.socket.on("usersJoined",(data) =>{
             this.setState({
