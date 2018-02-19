@@ -3,6 +3,7 @@ import logo from './2.png';
 import logo2 from './5.png';
 import './App.css';
 import Chat from "./Chat.js";
+import Sticker from "./Sticker.js";
 
 
 
@@ -15,12 +16,17 @@ class Landing extends Component {
     
       this.changePages= this.changePages.bind(this);
         this.showchat = this.showchat.bind(this);
+        this.changetoSticker= this.changetoSticker.bind(this);
     }
 
     
     changePages(){
         var page = "Chat";
        this.props.changepage(page);
+    }
+    changetoSticker(){
+        var page = "sticker";
+        this.props.changepage(page);
     }
     showchat(){
         this.setState({
@@ -74,6 +80,7 @@ class Landing extends Component {
     :null
 }
           <button className="but1" onClick = {this.showchat.bind(this)}>Chat Now</button>
+          <button className="but2" onClick = {this.changetoSticker.bind(this)}>Sticker Page</button>
         </div>
         
       </div>

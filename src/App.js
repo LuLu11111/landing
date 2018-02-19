@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Landingpage from "./Landing.js";
-import Chat from "./Chat.js"
+import Chat from "./Chat.js";
+import Sticker from "./Sticker.js";
 
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
             page:""
         
         }
+        
         this.changePage=
             this.changePage.bind(this);
     }
@@ -19,7 +21,7 @@ class App extends Component {
     changePage(data){
         this.setState({
             page:data
-        })
+        });
     }
     
     
@@ -35,6 +37,9 @@ class App extends Component {
       else if(this.state.page === "Chat"){
           cPage = <Chat/>
       }
+          else if(this.state.page == "sticker"){
+              cPage = <Sticker/>
+          }
     
     return (
         <div>

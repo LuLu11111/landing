@@ -90,7 +90,7 @@ body {
 .but1{
     position: absolute;
     top:77%;
-    left: 44%;
+    left: 34%;
     color:white;
     background-color:brown;
     border: 2px solid brown;
@@ -98,7 +98,16 @@ body {
     height: 7%;
 }
 
-
+.but2{
+    position: absolute;
+    top:77%;
+    left: 54%;
+    color:white;
+    background-color:brown;
+    border: 2px solid brown;
+    width:15%;
+    height: 7%;
+}
 #chatDisplay{
     width:100%;
     background-color: white;
