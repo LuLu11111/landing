@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import Room from "./comps/Room";
 
 
 class Sticker extends Component {
@@ -23,7 +23,7 @@ constructor(props){
         
     componentDidMount(){
         //console.log(this.refs.thedisplay.id);
-    
+        this.socket = mySocket(" https://reallysocket.herokuapp.com/");
         this.socket.on("createimage", (data)=>{
             this.setState({
                 allusers:data
@@ -107,7 +107,7 @@ constructor(props){
         var comp = null;
         
         if(this.state.showDisplay ===false){
-           // comp = <Room  handleDisplay={this.handleDisplay}/>
+            comp = <Room  handleDisplay={this.handleDisplay}/>
             
         }else{
             comp = (
