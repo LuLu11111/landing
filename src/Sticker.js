@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Room from "./comps/Room";
+
 
 
 class Sticker extends Component {
