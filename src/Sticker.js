@@ -107,7 +107,7 @@ constructor(props){
         var comp = null;
         
         if(this.state.showDisplay ===false){
-            comp = <Room  handleDisplay={this.handleDisplay}/>
+           // comp = <Room  handleDisplay={this.handleDisplay}/>
             
         }else{
             comp = (
