@@ -23,7 +23,7 @@ constructor(props){
         
     componentDidMount(){
         //console.log(this.refs.thedisplay.id);
-        this.socket = mySocket(" https://reallysocket.herokuapp.com/");
+        
         this.socket.on("createimage", (data)=>{
             this.setState({
                 allusers:data
