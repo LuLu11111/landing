@@ -75,7 +75,7 @@ class Chat extends Component {
       <div className="inp1"> <input className="input1" type="text" placeholder="type your username" onChange={
           this.handelUsename}/>
           
-          <button onClick = {this.joinChat} className="send">Join Chat</button></div>
+          <button onClick = {this.joinChat} className="send">Join Our Chat</button></div>
       )}
       else if(this.state.mode === 1){
           
