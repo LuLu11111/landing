@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
+import mySocket from "socket.io-client";
 import Room from "./comps/Room";
 
-
 class Sticker extends Component {
-    
-constructor(props){
+    constructor(props){
         super(props);
         this.state = {
             myImg:require("./img/1.png"),
@@ -13,6 +12,7 @@ constructor(props){
             allusers:[],
             myId:null,
             showDisplay:false,
+            stickers:[]
             
         }
         
@@ -23,6 +23,7 @@ constructor(props){
         
     componentDidMount(){
         //console.log(this.refs.thedisplay.id);
+        this.socket = mySocket("https://anothersocket.herokuapp.com/");
         
         this.socket.on("createimage", (data)=>{
             this.setState({
@@ -50,16 +51,34 @@ constructor(props){
                 x:ev.pageX,
                 y:ev.pageY,
                 id:this.state.myId,
-                img:this.refs["u"+this.state.myId].src
+                src:this.refs["u"+this.state.myId].src
             });
         });
+            
+            this.refs.thedisplay.addEventListener("click", (ev)=>{
+                this.socket.emit("sticker", {
+                    x:ev.pageX,
+                    y:ev.pageY,
+                    //id:this.state.myId,
+                    src:this.refs["u"+this.state.myId].src
+            });
+                })
+                
+            
        }); 
+
+        this.socket.on("newsticker", (data)=>{
+            this.setState({
+                stickers:data
+            })
+            
+        })
         
         this.socket.on("usermove", (data)=>{
             console.log("user has moved");
             this.refs["u"+data.id].style.top = data.y+"px";
             this.refs["u"+data.id].style.left = data.x+"px";
-            this.refs["u"+data.id].src = data.img;
+            this.refs["u"+data.id].src = data.src;
         })
         /*
         this.refs.thedisplay.addEventListener("mousemove", (ev)=>{
@@ -100,26 +119,41 @@ constructor(props){
     render() {
         var auImgs = this.state.allusers.map((obj,i)=>{
             return (
-                <img ref={"u"+obj} key={i} height={50} className="allImgs" src={this.state.myImg} />
+                <img ref={"u"+obj}className="allImgs" src={this.state.myImg} height={50} key={i} />
             )
+        });
+        
+        var stickers = this.state.stickers.map((obj,i)=>{
+            
+            var mstyle = {left:obj.x, top:obj.y}
+            
+            return(
+                <img style={mstyle} src={obj.src} key={i} height={50} className="allImgs"/>
+            
+            )
+            
         })
+        
         
         var comp = null;
         
         if(this.state.showDisplay ===false){
-            comp = <Room  handleDisplay={this.handleDisplay}/>
+            comp = <Room 
+                handleDisplay={this.handleDisplay}
+            />;
             
         }else{
             comp = (
-            <div>
-             <div ref="thedisplay" id="display">
-                    {auImgs}
-                </div>
-                    <div id="controls">
-                        {this.state.myId}
-                        <img src={this.state.myImg} height={50} onClick={this.handleImage} />
-                        <img src={this.state.myImg2} height={50} onClick={this.handleImage} />
+                <div>
+                    <div ref="thedisplay" id="display">
+                        {auImgs}
+                        {stickers}
                     </div>
+                        <div id="controls">
+                            {this.state.myId}
+                            <img src={this.state.myImg} height={50} onClick={this.handleImage} />
+                            <img src={this.state.myImg2} height={50} onClick={this.handleImage} />
+                        </div>
             </div>
         );
         
@@ -135,4 +169,5 @@ constructor(props){
         );
     }
 }
+
 export default Sticker;
