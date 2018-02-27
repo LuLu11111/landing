@@ -4,10 +4,10 @@
 
 #display {
     position:fixed;
-    background-color:white;
+ 
     left:0;
     top:0;
-    width:100vw;
+    width:50vw;
     height:100vh;
     cursor:none;
 }
