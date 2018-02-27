@@ -27,6 +27,10 @@ class Landing extends Component {
     changetoSticker(){
         var page = "sticker";
         this.props.changepage(page);
+        
+        this.setState({
+            Sclicked:!this.state.Sclicked
+        });
     }
     showchat(){
         this.setState({
@@ -81,7 +85,7 @@ class Landing extends Component {
 }
           <button className="but1" onClick = {this.showchat.bind(this)}>Chat Now</button>
           
-           {this.state.clicked ?
+           {this.state.Sclicked ?
         
         <Sticker 
         closePopup={this.showchat.bind(this)}
