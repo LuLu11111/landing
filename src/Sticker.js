@@ -119,7 +119,7 @@ class Sticker extends Component {
     render() {
         var auImgs = this.state.allusers.map((obj,i)=>{
             return (
-                <img ref={"u"+obj}className="allImgs" src={this.state.myImg} height={50} key={i} />
+                <img ref={"u"+obj}className="allImgs" src={this.state.myImg} height={80} key={i} />
             )
         });
         
@@ -128,7 +128,7 @@ class Sticker extends Component {
             var mstyle = {left:obj.x, top:obj.y}
             
             return(
-                <img style={mstyle} src={obj.src} key={i} height={50} className="allImgs"/>
+                <img style={mstyle} src={obj.src} key={i} height={80} className="allImgs"/>
             
             )
             
@@ -151,8 +151,8 @@ class Sticker extends Component {
                     </div>
                         <div id="controls">
                             {this.state.myId}
-                            <img src={this.state.myImg} height={50} onClick={this.handleImage} />
-                            <img src={this.state.myImg2} height={50} onClick={this.handleImage} />
+                            <img src={this.state.myImg} height={80} onClick={this.handleImage} />
+                            <img src={this.state.myImg2} height={80} onClick={this.handleImage} />
                         </div>
             </div>
         );
