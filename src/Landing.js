@@ -85,7 +85,9 @@ class Landing extends Component {
 }
           <button className="but1" onClick = {this.showchat.bind(this)}>Chat Now</button>
           
-           {this.state.Sclicked ?
+           
+          
+          {this.state.Sclicked ?
         
         <Sticker 
         closePopup={this.showchat.bind(this)}
