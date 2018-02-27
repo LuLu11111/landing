@@ -80,6 +80,14 @@ class Landing extends Component {
     :null
 }
           <button className="but1" onClick = {this.showchat.bind(this)}>Chat Now</button>
+          
+           {this.state.clicked ?
+        
+        <Sticker 
+        closePopup={this.showchat.bind(this)}
+    />
+    :null
+}
           <button className="but2" onClick = {this.changetoSticker.bind(this)}>Sticker Page</button>
         </div>
         
