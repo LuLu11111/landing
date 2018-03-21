@@ -16,7 +16,7 @@ class HGame extends Component {
     }
     
     componentDidMount(){
-        this.socket = mySocket("http://localhost:10009");
+        this.socket = mySocket("https://hgamesocket.herokuapp.com/");
         
         
         this.socket.on("newq", (data)=>{
