@@ -1,0 +1,117 @@
+
+#but1{
+    width:15%;
+    height: 7%;
+     position: absolute;
+  top: 10%;
+   left: 10%;
+     color:white;
+    background-color:brown;
+    border: 2px solid brown;
+
+}
+#but2{
+    width:15%;
+    height: 7%;
+     position: absolute;
+    top: 10%;
+    right: 10%;;
+     color:white;
+    background-color:brown;
+    border: 2px solid brown;
+
+}
+#but3{
+    width:15%;
+    height: 7%;
+     position: absolute;
+    top: 10%;
+    left: 10%;
+     color:white;
+    background-color:brown;
+    border: 2px solid brown;
+
+}
+#but4{
+    width:15%;
+    height: 7%;
+     position: absolute;
+    top: 10%;
+   right: 10%;
+     color:white;
+    background-color:brown;
+    border: 2px solid brown;
+
+}
+
+.qustion{
+    position: absolute;
+    top: 10%;
+    width:55%;
+    height: 7%; 
+    left: 18%;
+}
+.an1{
+    position: absolute;
+    top: 25%;
+    width:25%;
+    height: 7%; 
+    left: 18%;
+}
+
+.an2{
+    position: absolute;
+    top: 25%;
+    width:25%;
+    height: 7%; 
+    left: 48%;
+}
+.op{
+    position: absolute;
+    top: 40%;
+    width:25%;
+    height: 7%; 
+    left: 35%;
+}
+.btn6{
+    position: absolute;
+    top: 55%;
+    width:25%;
+    height: 7%; 
+    left: 35%;
+   
+    color:white;
+    background-color:brown;
+    border: 2px solid brown;
+}
+.btn7{
+    position: absolute;
+    top: 55%;
+    width:25%;
+    height: 7%; 
+    left: 10%;
+   
+    color:white;
+    background-color:brown;
+    border: 2px solid brown;
+}
+
+.btn8{
+    position: absolute;
+    top: 55%;
+    width:25%;
+    height: 7%; 
+    right: 10%;
+   
+    color:white;
+    background-color:brown;
+    border: 2px solid brown;
+}
+#qus{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width:55%;
+ color: white;
+    font-size: 40px;
+}
