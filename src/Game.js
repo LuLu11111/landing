@@ -78,7 +78,7 @@ class Game extends Component {
         this.setState({
             mode:1
         })
-        this.socket = mySocket("http://localhost:10008/");
+        this.socket = mySocket("https://gamesocket2.herokuapp.com/");
     
         
         this.socket.emit("username", this.state.username);
