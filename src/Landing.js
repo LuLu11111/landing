@@ -4,6 +4,8 @@ import logo2 from './5.png';
 import './App.css';
 import Chat from "./Chat.js";
 import Sticker from "./Sticker.js";
+import Game from "./Game.js";
+import HGame from "./HGame.js";
 
 
 
@@ -11,12 +13,19 @@ class Landing extends Component {
     constructor(props){
         super(props);
         this.state={
-            clicked:false
+            clicked:false,
+            Sclicked:false,
+            Gclicked:false,
+            Ghclicked:false
+            
         };
     
       this.changePages= this.changePages.bind(this);
         this.showchat = this.showchat.bind(this);
         this.changetoSticker= this.changetoSticker.bind(this);
+        this.changetoGame = this.changetoGame.bind(this);
+        
+        this.changetoHGame = this.changetoHGame.bind(this);
     }
 
     
@@ -24,6 +33,9 @@ class Landing extends Component {
         var page = "Chat";
        this.props.changepage(page);
     }
+    
+    
+    
     changetoSticker(){
         var page = "sticker";
         this.props.changepage(page);
@@ -32,6 +44,27 @@ class Landing extends Component {
             Sclicked:!this.state.Sclicked
         });
     }
+    
+    changetoGame(){
+        var page = "game";
+        this.props.changepage(page);
+this.setState({
+            Gclicked:!this.state.Gclicked
+        });
+    }
+    
+    
+    
+     changetoHGame(){
+        var page = "game2";
+        this.props.changepage(page);
+         this.setState({
+            Gclicked:!this.state.Ghclicked
+        });
+
+    }
+    
+    
     showchat(){
         this.setState({
             clicked:!this.state.clicked
@@ -75,26 +108,61 @@ class Landing extends Component {
  </p>
 
         </div>
+        
+        
+        
+        
        <div>
         {this.state.clicked ?
         
         <Chat 
         closePopup={this.showchat.bind(this)}
     />
+
+    
     :null
 }
-          <button className="but1" onClick = {this.showchat.bind(this)}>Chat Now</button>
+         
+    
+    
+    <button className="but1" onClick = {this.showchat.bind(this)}>Chat Now</button>
           
            
           
           {this.state.Sclicked ?
         
         <Sticker 
-        closePopup={this.showchat.bind(this)}
+        closePopup={this.changetoSticker.bind(this)}
     />
     :null
-}
+          }
+
           <button className="but2" onClick = {this.changetoSticker.bind(this)}>Sticker Page</button>
+          
+          
+          
+          
+          {this.state.Gclicked ?
+        
+        <Game 
+        closePopup={this.changetoGame.bind(this)}
+    />
+    :null
+} 
+          
+          
+          <button className="but3" onClick = {this.changetoGame.bind(this)}> Game</button>
+          
+           {this.state.Ghclicked ?
+        
+        <HGame 
+        closePopup={this.changetoHGame.bind(this)}
+    />
+    :null
+} 
+          
+           <button className="but4" onClick = {this.changetoHGame.bind(this)}> Qustion Game</button>
+           
         </div>
         
       </div>

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Landingpage from "./Landing.js";
 import Chat from "./Chat.js";
+import './App.css';
 import Sticker from "./Sticker.js";
-
+import Game from "./Game.js";
+import HGame from "./HGame.js";
 
 class App extends Component {
     constructor(props){
@@ -37,9 +39,17 @@ class App extends Component {
       else if(this.state.page === "Chat"){
           cPage = <Chat/>
       }
-          else if(this.state.page == "sticker"){
+          else if(this.state.page === "sticker"){
               cPage = <Sticker/>
           }
+              else if(this.state.page === "game"){
+                  cPage = < Game />
+              }
+                  
+                  
+                   else if(this.state.page === "game2"){
+                  cPage = < HGame />
+              }
     
     return (
         <div>
