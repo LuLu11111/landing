@@ -1,5 +1,6 @@
 
 #gameContainer {
+    background-image: url(bkg.png);
       position:absolute;
     height: 100%;
     width:100%;
