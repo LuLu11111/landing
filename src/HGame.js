@@ -76,7 +76,7 @@ class HGame extends Component {
         //if stage is at 0, choose a room. Room component
         if(this.state.stage ===0){
               comp = (
-                <div>
+                <div className="bkg1">
                     <button id="but3" onClick={this.handleStage.bind(this, 1, "room1")}>Room 1</button>
                     <button id="but4" onClick={this.handleStage.bind(this, 1, "room2")}>Room 2</button>
                 </div>
@@ -86,7 +86,7 @@ class HGame extends Component {
         } else if (this.state.stage  === 1){
             //select to be either host / player
                 comp = (
-                <div>
+                <div className="bkg2">
                     <button id="but1" onClick={this.handlePlayers.bind(this, true)}>Make your Qustion</button>
                     <button id="but2" onClick={this.handlePlayers.bind(this, false)}>Play</button>
             
@@ -98,7 +98,8 @@ class HGame extends Component {
         } else if (this.state.stage  === 2){
             if(this.state.host ===true){
                 comp = (
-                    <div>
+                    <div className="bkg3">
+                    
                         <input ref="q" className="qustion" type="text" placeholder="Type your question here" />
                         <input ref="o1"
                     className="an1"
@@ -125,7 +126,7 @@ class HGame extends Component {
             
             else if(this.state.host ===false){
                 comp = (
-                    <div>
+                    <div className="bkg4">
                         <div id="qus">{this.state.qobj.q}</div>
                         <button className="btn7" onClick={this.handleAnswer.bind(this, "1")}>{this.state.qobj.o1}</button>
                 
@@ -140,7 +141,7 @@ class HGame extends Component {
         }
 
         return (
-            <div>
+            <div className="bkg3">
                 {comp}
             </div>
         )

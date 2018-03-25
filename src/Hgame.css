@@ -1,4 +1,64 @@
+.bkg1{
+     background-image: url(gamebkg.png);
+    height: 100%;
+    width:100%;
+     position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto; 
+     -moz-border-radius: 1%;
+	-webkit-border-radius: 1%;
+	border-radius: 1%;
+    
+}
 
+.bkg2{
+     background-image: url(gamebkg.png);
+    height: 100%;
+    width:100%;
+     position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto; 
+     -moz-border-radius: 1%;
+	-webkit-border-radius: 1%;
+	border-radius: 1%;
+    
+}
+.bkg3{
+    background-image: url(gamebkg.png);
+    height: 100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto; 
+     -moz-border-radius: 1%;
+	-webkit-border-radius: 1%;
+	border-radius: 1%;
+    
+}
+.bkg4{
+    background-image: url(gamebkg.png);
+     
+    height: 100%;
+    width:100%;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto; 
+     -moz-border-radius: 1%;
+	-webkit-border-radius: 1%;
+	border-radius: 1%;
+    
+}
 #but1{
     width:15%;
     height: 7%;

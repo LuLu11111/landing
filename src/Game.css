@@ -1,9 +1,37 @@
+
 #gameContainer {
-    background-image: url(bkg.png);
-    width: 100vw;
-    height: 80vh;
+      position:absolute;
+    height: 100%;
+    width:100%;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto; 
+     -moz-border-radius: 1%;
+	-webkit-border-radius: 1%;
+	border-radius: 1%;
     
 }
+#userTname{
+        background-image: url(gamebkg.png);
+
+      position:absolute;
+    height: 100%;
+    width:100%;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto; 
+     -moz-border-radius: 1%;
+	-webkit-border-radius: 1%;
+	border-radius: 1%;
+    
+    
+}
+
+
 #end{
     width: 100px;
     height: 30px;
@@ -15,6 +43,9 @@
 #username{
     color: aliceblue;
     font-size: 20px;
+    position: absolute;
+    top: 2%;
+    left: 5%;
     
 }
 #alluser{
@@ -27,6 +58,9 @@
 #score{
      color: aliceblue;
     font-size: 20px;
+    position: absolute;
+    top: 8%;
+    left: 5%;
     
 }
 .nameText{

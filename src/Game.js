@@ -12,6 +12,7 @@ class Game extends Component {
         this.state = {
             mode:0,
             username:"", 
+            bgImgsrc:require("./bkg.png"),
             img1:require("./mole.png"), 
             img2:require("./mole2.png"), 
             userScore:0,
@@ -78,8 +79,10 @@ class Game extends Component {
         this.setState({
             mode:1
         })
-        this.socket = mySocket("https://gamesocket2.herokuapp.com/");
+       this.socket = mySocket("https://gamesocket2.herokuapp.com/");
     
+           
+        
         
         this.socket.emit("username", this.state.username);
         
